@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
             if (response.status === 200) {
                 localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data.user));
                 setUser(data.user);
-                navigate('/home');
+                navigate('/');
             } else {
                 console.error('Login failed:', data.error);
             }
@@ -68,7 +68,7 @@ export const AuthProvider = ({ children }) => {
                 localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data.user));
                 setUser(data.user);
                 setSignUpError(null);
-                navigate('/home');
+                navigate('/');
             }  else {
                 console.error('Sign-up failed:', data.error);
                 setSignUpError(data.error);

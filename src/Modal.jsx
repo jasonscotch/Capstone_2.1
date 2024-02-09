@@ -7,7 +7,7 @@ const Modal = ({ isOpen, onClose, children, footer }) => {
         <div className="modal-overlay" onClick={onClose}></div>
         <div className="rpgui-container framed-golden-2">
           <div className="modal-content">
-            <span className="close" onClick={onClose}>
+            <span data-testid="close-modal" className="close" onClick={onClose}>
               &times;
             </span>
             {children}

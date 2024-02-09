@@ -28,7 +28,7 @@ const SkillSection = ({ skill, setSkill, originalSkill, setOriginalSkill, initia
             <input
               type="number"
               value={originalSkill}
-              onChange={handleInputChange}
+              onChange={(e) => handleInputChange(e)}
             />
             <button onClick={handleInputSubmit}> > </button>
           </label>

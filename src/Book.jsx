@@ -82,6 +82,7 @@ const Book = () => {
     return (
       choiceValue && (
         <button 
+          data-testid={`choice`}
           key={choiceNumber}
           disabled={inCombat} 
           className="rpgui-button"
@@ -130,9 +131,9 @@ const Book = () => {
         </p>
 
         {item.cost === 0 ? (
-          <button className="rpgui-button" onClick={() => handleTakeItem(item.item_id)} disabled={disabledButtons.includes(item.item_id)}>Take</button>
+          <button className="rpgui-button" onClick={() => handleTakeItem(item.item_id)} disabled={disabledButtons?.includes(item.item_id) || false}>Take</button>
         ) : (
-          <button className="rpgui-button" onClick={() => handleBuyItem(item.item_id)} disabled={disabledButtons.includes(item.item_id)}>Buy</button>
+          <button className="rpgui-button" onClick={() => handleBuyItem(item.item_id)} disabled={disabledButtons?.includes(item.item_id) || false}>Buy</button>
         )}
       </div>
     ));

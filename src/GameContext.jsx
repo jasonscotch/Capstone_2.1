@@ -217,7 +217,7 @@ export const GameProvider = ({ children }) => {
         saveError,
         setSaveError
 
-      }), [GameData, LoadSavedGame, NewGame, data, setData, items, enemies, inventoryItems, progressId, gold, setGold, skill, setSkill, stamina, setStamina, luck, setLuck, loadAvailable, setLoadAvailable]);
+      }), [GameData, LoadSavedGame, NewGame, data, setData, items, enemies, inventoryItems, progressId, gold, setGold, skill, setSkill, stamina, setStamina, luck, setLuck, loadAvailable, setLoadAvailable, disabledButtons]);
       
     return (
         <GameContext.Provider value={GameContextValue}>

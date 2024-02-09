@@ -42,8 +42,8 @@ const StaminaSection = ({ stamina, setStamina, originalStamina, setOriginalStami
                 <h1>{stamina}</h1>
 
                 <div>
-                    <button onClick={handleDecrease} disabled={stamina === 0}>-</button>
-                    <button onClick={handleIncrease} disabled={stamina === originalStamina}>+</button>
+                    <button aria-label="-" onClick={handleDecrease} disabled={stamina === 0}>-</button>
+                    <button aria-label="+"onClick={handleIncrease} disabled={stamina === originalStamina}>+</button>
                 </div>
             </div>
         )}
