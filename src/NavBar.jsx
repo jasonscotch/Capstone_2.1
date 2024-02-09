@@ -15,13 +15,13 @@ function NavBar() {
     
       <div className="rpgui-container framed-golden-2">
         <Navbar className="position-absolute top-0 end-0">
-          <NavLink href="/">
+          <NavLink href="/home">
             
             FIGHTING FANTASY
           </NavLink>
           <span className="right">
             {user ? (
-              <button to='/' onClick={logout}>LOG OUT</button>
+              <button to='/home' onClick={logout}>LOG OUT</button>
             ) : (
               <>
                <button onClick={toSignup} >SIGN UP</button>

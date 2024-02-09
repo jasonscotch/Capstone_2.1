@@ -24,7 +24,7 @@ function App() {
                 <Route path='/login' element={<LoginPage />} />
 
                 <Route element={<ProtectedRoute />}>
-                  <Route exact path='/' element={<Home />} />
+                  <Route exact path='/home' element={<Home />} />
                 </Route>
                 <Route element={<ProtectedRoute />}>
                   <Route exact path='/settings' element={<SettingsPage />} />

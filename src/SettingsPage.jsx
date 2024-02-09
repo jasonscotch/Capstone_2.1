@@ -14,7 +14,7 @@ const SettingsPage = () => {
 
   const navigate = useNavigate();
   const handleCancel = () => {
-    navigate('/');
+    navigate('/home');
   };
 
   return (

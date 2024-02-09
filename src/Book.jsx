@@ -9,39 +9,23 @@ import { useNavigate } from "react-router-dom";
 const Book = () => {
 
   const {
-    loadId,
-    setLoadId,
     inventoryItems,
     setInventoryItems,
     gold,
     setGold,
     stamina,
     setStamina,
-    originalStamina,
-    setOriginalStamina,
     skill,
     setSkill,
-    originalSkill,
-    setOriginalSkill,
-    luck,
     setLuck,
-    originalLuck,
-    setOriginalLuck,
     enemies,
     setEnemies,
     combatRound,
     setCombatRound,
     inCombat,
     setInCombat,
-    remainingProvisions,
-    setRemainingProvisions,
-    setInitialLuckInputDone,
-    setInitialSkillInputDone,
-    setInitialStaminaInputDone,
     data,
-    setData,
     items,
-    setItems,
     itemsAvailable,
     setItemsAvailable,
     disabledButtons,
@@ -135,7 +119,7 @@ const Book = () => {
   };
 
   const renderItems = () => {
-
+    console.log('Debug includes call:', {disabledButtons});
     if (items.length === 0 || (items && items.some(item => item.item_id === null))) {
       return <p> </p>;
     }

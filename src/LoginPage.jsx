@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
-import {useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const { user, login } = useAuth();
@@ -20,7 +20,7 @@ const LoginPage = () => {
   useEffect(() => {
     if (user) {
 
-      navigate('/', { replace: true });
+      navigate('/home', { replace: true });
     }
   }, [user]);
 
@@ -31,18 +31,18 @@ const LoginPage = () => {
         <form onSubmit={handleLogin}>
           <label>
             Username:
-            <input type='text' value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input data-testid='username-input' type='text' value={username} onChange={(e) => setUsername(e.target.value)} />
           </label>
           <br />
           <br />
           <label>
             Password:
-            <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input data-testid='password-input' type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
           </label>
           <br />
           <br />
           <br />
-          <button className="rpgui-button" type='submit'><p>Login</p></button>
+          <button className="rpgui-button" type='submit' data-testid='login'><p>Login</p></button>
         </form>
       </div> 
     </div>

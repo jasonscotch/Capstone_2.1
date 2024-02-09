@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useAuth } from './AuthContext';
 import { useNavigate } from 'react-router-dom';
-import { useGame } from "./GameContext";
 import './dist/rpgui.css';
 
 
@@ -10,8 +9,6 @@ const SignUpPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [adventurerName, setAdventurerName] = useState('');
-  
-  const { saveError, setSaveError } = useGame();
 
   const navigate = useNavigate();
   const handleCancel = () => {
@@ -36,6 +33,7 @@ const SignUpPage = () => {
           <label>
             Username:
             <input
+              data-testid='username-input'
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -48,6 +46,7 @@ const SignUpPage = () => {
           <label>
             Adventurer Name:
             <input
+              data-testid='adventurer-name'
               type="text"
               value={adventurerName}
               onChange={(e) => setAdventurerName(e.target.value)}
@@ -59,6 +58,7 @@ const SignUpPage = () => {
           <label>
             Password:
             <input
+              data-testid='password-input'
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -68,8 +68,8 @@ const SignUpPage = () => {
           <br />
           <br />
           <br />
-          <button className="rpgui-button" type="submit"><p>Sign Up</p></button>
-          <button className="rpgui-button" onClick={handleCancel}><p>Cancel</p></button>
+          <button data-testid='sign-up' className="rpgui-button" type="submit"><p>Sign Up</p></button>
+          <button data-testid='cancel' className="rpgui-button" onClick={handleCancel}><p>Cancel</p></button>
         </form>
       </div>
     </div>

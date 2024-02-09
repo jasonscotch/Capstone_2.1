@@ -12,7 +12,7 @@ const DeleteProgress = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
   const goHome = () => {
-    navigate('/');
+    navigate('/home');
     window.location.reload();
   };
 
