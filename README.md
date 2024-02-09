@@ -34,7 +34,7 @@ This project makes use of several key resources, libraries, and inspirations tha
 
 - **Shadow of the Giants by Ian Livingstone**: This project is a digital version of the Fighting Fantasy series, "Shadow of the Giants" by Ian Livingstone. The interactive and choice-driven narrative of our game pays homage to the innovative storytelling found in these books. Discover more about Fighting Fantasy [here](https://www.fightingfantasy.com/).
 
-Special thanks to the developers, authors, and contributors of these tools and works for making them available to the open-source community and for inspiring creators everywhere.
+Special thanks to the developers and contributors of these tools for making them available to the open-source community and for inspiring creators everywhere.
 
 ## React + Vite
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
