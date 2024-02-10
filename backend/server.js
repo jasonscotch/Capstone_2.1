@@ -12,8 +12,8 @@ const { Pool } = require('pg');
 const { NotFoundError } = require("./expressError");
 
 const app = express();
-const port = +process.env.PORT || 3001;
-const SECRET_KEY = process.env.JWT_SECRET || 'nerd-dev'
+const port = +process.env.PORT;
+const SECRET_KEY = process.env.JWT_SECRET;
 
 module.exports = app;
 
